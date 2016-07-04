@@ -1,5 +1,7 @@
 var User = require('mongoose').model('User'),
 	passport = require('passport');
+// needed to execute python script
+var PythonShell = require('python-shell');
 
 var getErrorMessage = function(err) {
 	var message = '';
@@ -178,3 +180,13 @@ exports.delete = function(req, res, next) {
 		}
 	})
 };
+
+exports.uploadVideo = function(req, res, next) {
+	// code to upload video file to the server
+
+	// then this code is executed
+	PythonShell.shell('pythonScripts/script.py', function(err){
+		if (err) throw err;
+		console.log('Finished encoding video.');
+	});
+}
