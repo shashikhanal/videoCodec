@@ -17,4 +17,4 @@ class ImgArrayRev:
 
 	def convertToImage(self):
 		image = Image.fromarray( self.arrayName, self.mode )
-		image.save(self.imgName +".jpg")
+		image.save(self.imgName,optimize=True,quality=50)
