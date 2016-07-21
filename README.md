@@ -12,4 +12,4 @@ The list of files are :
 
 ## How to run
 
-To run, place a video in the project directory and rename it to '_input.mp4_'. Only '_input.mp4_' is supported for now. It will be changed later. Then to run, type '''python3 core.py''' in the terminal. This will output a video named '_output.mkv_'.
+To run, place a video in the project directory and rename it to '_input.mp4_'. Only '_input.mp4_' is supported for now. It will be changed later. Then to run, type `python3 core.py` in the terminal. This will output a video named '_output.mkv_'.
