@@ -6,6 +6,7 @@ class FrameComparator:
 		self.arrayList = arrayList
 		self.diffArray = []
 
+	
 	def getDiff(self):
 		reference = self.arrayList[0]
 		self.diffArray.append(reference)
