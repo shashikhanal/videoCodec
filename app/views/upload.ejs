@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Video Codec | Upload
+	</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/signin.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"><a href="/"><strong>PLAYER</strong></a></div>
+				<div class="col-md-8"><!--<input type="text" placeholder="Search"><button><span class="glyphicon glyphicon-search"></span></button>--></div>
+				<div class="col-md-2"><a href="/video"><button id="upload"><span class="glyphicon glyphicon-upload"></span> Upload</button></a></div></div>
+			</div>
+		</div>
+	</header>
+	<div class="header-offset"></div>
+	<div class="container">
+		<div class="row">
+			<form action="/publish" method="post">
+
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar"></div>
+						</div>
+						<center><button class="btn btn-lg upload-btn" type="button">Upload Video</button></center>
+					</div>
+				</div>
+				<input id="upload-input" type="file" name="uploads[]" style="display:none;"></br>
+			</form>
+
+			
+		</div>
+	</div>
+	<script
+	src="https://code.jquery.com/jquery-3.1.0.min.js"
+	integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+	crossorigin="anonymous">
+</script>
+
+<script src="scripts/video.js"></script>
+
+</body>
+</html>

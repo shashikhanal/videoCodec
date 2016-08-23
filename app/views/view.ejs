@@ -1,0 +1,78 @@
+<div id="main" ng-controller="controller">
+	<div class="container">
+		<div class="row tb-padding">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+			<% if(vid_flag == true){ %>
+
+				<div id="video">
+					<div>
+						<p id="vidlocate" style="display:none"><%=vid_src%></p>
+						<video id="video_src">
+							<source src="<%=vid_src%>" type="video/mp4"></source>
+						</video>
+						<div id="video-controls">
+							<div id="seek-bar" value="0">
+								<div id="seeklength"></div>
+								<div id="seekthumb"></div>
+							</div>
+							<button type="button" id="play-pause">
+								<span id="pp" class="glyphicon glyphicon-play"></span>
+							</button>
+							<button type="button" id="mute">
+								<span id="mt" class="glyphicon glyphicon-volume-up"></span>
+							</button>
+							<button type="button" id="full-screen">
+								<span id="up" class="glyphicon glyphicon-fullscreen"></span>
+								<span id="down" class="glyphicon glyphicon-resize-small"></span>
+							</button>
+							<span id="time">00:00</span>
+						</div>
+					</div>
+				</div>
+				<script src="/scripts/upload.js"></script>
+<%}else{%>
+	<center><img src="/img/box.gif"/></center>
+<%} %>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" style="display:none">
+		<div class="row-fluid tb-padding">
+			<div class="col-md-1"></div>
+			<div class="col-md-10" id="vid-desc">
+				<div class="row">
+					<div class="col-md-12">
+						<p id="vid-title">
+							{{video.title}}
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4"><p>Uploaded Date : {{video.uploaddate}}</p></div>
+					<div class="col-md-4"><p>Video Metadata : {{video.metadata}}</p></div>
+					<div class="col-md-4"><p></p></div>
+				</div>
+				<div class="row">
+					<div class="col-md-4"><p>Video Info : {{video.video_info}}</p></div>
+					<div class="col-md-4"><p>Audio Info : {{video.audio_info}}</p></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p>{{video.description}}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+</div>
+<script
+	src="https://code.jquery.com/jquery-3.1.0.min.js"
+	integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+	crossorigin="anonymous">
+</script>
+<script src="/scripts/jquery-ui.min.js"></script>

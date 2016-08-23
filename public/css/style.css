@@ -1,0 +1,246 @@
+*{
+	font-family: 'Open Sans',sans-serif;
+}
+body{
+	background: #efefef;
+}
+header{
+	width: 100%;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 99999;
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+	background: #fff;
+	padding: 10px;
+	line-height: 30px;
+	padding-bottom: 8px;
+}
+header input{
+	border: 1px solid #ccc;
+	width: 75%;
+	height: 30px;
+	padding: 5px;
+	outline: none;
+	position: relative;
+	top: -2px;
+}
+header input:focus{
+	box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+}
+header button, #upload-container button{
+	min-width: 75px;
+	border:1px solid #48b;
+	height: 30px;
+	position: relative;
+	left: -1px;
+	background: #49c;
+	color: #fff;
+	outline: none;
+	transition: .2s
+}
+header button:hover, #upload-container button:hover{
+	background: #48b;
+}
+header button:active, #upload-container button:active{
+	background: #47a;
+	border: 1px solid #47a;
+}
+header button#upload{
+	width: 90px;
+	float: right;
+}
+.header-offset{
+	margin-bottom: 50px;
+}
+#main #video{
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	background: #000;
+}
+#main #video > div{
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+}
+#main #video video{
+	height: 100%;
+}
+.tb-padding{
+	padding-top: 15px;
+}
+#upload-container{
+	margin-top: 120px;
+}
+#upload-container .c{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: #fff;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1); 
+	border: 1px solid #e6e6e6;
+}
+
+#vid-desc{
+	padding: 15px;
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+	margin-bottom: 15px;
+}
+#vid-desc p{
+	margin: 5px;
+}
+#vid-desc #vid-title{
+	font-weight: bolder;
+	font-size: 25px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+
+/* Video Controls */
+video::-webkit-media-controls {
+	display:none !important;
+}
+video::-webkit-media-controls-enclosure {
+	display:none !important;
+}
+#video:hover #video-controls{
+	opacity: 1;
+}
+
+#video-controls{
+	position: absolute;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	padding-top: 15px;
+	z-index: 2147483647;
+}
+
+#video:hover #video-controls.fade{
+	opacity: 1;
+}
+#video #video-controls.fade{
+	transition: opacity 0.2s;
+	opacity: 0;
+}
+
+#video-controls, #video-controls *{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#video-controls button{
+	background: none;
+	border: none;
+	outline: none;
+	color: #fff;
+	width:40px;
+	height:40px;
+	font-size: 20px;
+	padding:5px;
+	transition: .2s;
+	text-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+#video-controls button:hover{
+	color: #49c;
+}
+
+#video-controls button:active{
+	color: #48b;
+}
+
+#seek-bar{
+	display: block;
+	width: calc(100% - 10px);
+	padding: 0 5px;
+	position: relative;
+	top:-3px;
+	left: 5px;
+}
+
+#volume-bar{
+	display: none;
+	padding: 0 5px;
+	position: relative;
+	top:-3px;
+}
+
+#seek-bar #seeklength, #volume-bar #volumelength{
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+#seek-bar #seekthumb, #volume-bar #volumethumb{
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 20px;
+	background: #49c;
+	top:-6px;
+	left: 0;
+	box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+#seek-bar #seeklength{
+	transition: .2s;
+}
+
+#video-controls:hover #seeklength{
+	height:6px;
+}
+
+#video-controls:hover #seekthumb{
+	top:-4.5px;
+}
+
+#volumethumb{
+	right: 0;
+}
+
+
+#full-screen{
+	float: right;
+}
+
+#full-screen #down{
+	display: none;
+}
+
+#time{
+	padding: 5px;
+	font-size: 20px;
+	display: inline-block;
+	color: #fff;
+	float: right;
+	text-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+#upload-container input,#upload-container textarea{
+	border: 1px solid #ccc;
+	width: 95%;
+	padding: 5px;
+	outline: none;
+	position: relative;
+	top: -2px;
+}
+
+#upload-container input{
+	height: 30px;
+}
+
+#upload-container textarea{
+	height: 120px;
+}
+
+#upload-container input:focus, #upload-container textarea:focus{
+	box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+}
